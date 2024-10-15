@@ -4,6 +4,7 @@ import PostsList from './component/PostsList'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import AddPostForm from './features/posts/AddPostForm'
 import SinglePostPage from './features/posts/SinglePostPage'
+import EditPost from './features/posts/EditPost'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         <Route path='/posts/:postId' element={
           <div><SinglePostPage /></div>
         } />
+        <Route path='/editPost/:postId' element={
+          <EditPost/>
+        }/>
       </Routes>
     </Router>
   )
